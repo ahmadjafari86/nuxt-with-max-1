@@ -40,6 +40,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~/assets/images/rest-for-ever.jpg');
   background-position: center;
   background-size: cover;
 }

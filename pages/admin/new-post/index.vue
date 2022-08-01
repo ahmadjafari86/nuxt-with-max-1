@@ -7,21 +7,25 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 import AdminPostForm from "@/components/Admin/AdminPostForm";
 
 export default {
-  layout: 'admin',
+  layout: "admin",
   components: {
     AdminPostForm
   },
   methods: {
-    onSubmitted (postData) {
-      axios.post('https://nuxt-blog-max-70b06-default-rtdb.firebaseio.com/posts.json', {...postData, updatedDate: new Date()})
-        .then(results => console.log(results))
-        .catch(e => console.log(e))
+    onSubmitted(postData) {
+      axios
+        .post("https://nuxt-blog.firebaseio.com/posts.json", {
+          ...postData,
+          updatedDate: new Date()
+        })
+        .then(result => console.log(result))
+        .catch(e => console.log(e));
     }
-  },
+  }
 };
 </script>
 
@@ -37,4 +41,3 @@ export default {
   }
 }
 </style>
-

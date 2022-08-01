@@ -5,12 +5,10 @@
     <AppControlInput v-model="editedPost.thumbnail">Thumbnail Link</AppControlInput>
     <AppControlInput
       control-type="textarea"
-      v-model="editedPost.content">Content
-    </AppControlInput>
+      v-model="editedPost.content">Content</AppControlInput>
     <AppControlInput
       control-type="textarea"
-      v-model="editedPost.previewText">previewText
-    </AppControlInput>
+      v-model="editedPost.previewText">Preview Text</AppControlInput>
     <AppButton type="submit">Save</AppButton>
     <AppButton
       type="button"
@@ -51,7 +49,7 @@ export default {
   methods: {
     onSave() {
       // Save the post
-      this.$emit('submit', this.editedPost);
+      this.$emit('submit', this.editedPost)
     },
     onCancel() {
       // Navigate back
